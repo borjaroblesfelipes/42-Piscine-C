@@ -6,7 +6,7 @@
 /*   By: brobles- <brobles-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 08:17:11 by brobles-          #+#    #+#             */
-/*   Updated: 2022/11/03 13:32:43 by brobles-         ###   ########.fr       */
+/*   Updated: 2022/11/30 12:04:39 by brobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	ind = 0;
 	while (((s1[ind]) || (s2[ind])) && (ind < n))
 	{	
-		if (s1[ind] > s2[ind])
-			return (1);
-		else if (s1[ind] < s2[ind])
-			return (-1);
+		if (s1[ind] != s2[ind])
+			return (s1[ind] - s2[ind]);
 		ind++;
 	}
-	return (0);
+	return (0);	
 }	
 
 /*
